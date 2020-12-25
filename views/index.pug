@@ -1,0 +1,11 @@
+extends layouts/main.pug
+
+block title
+    title=index.title
+
+block contents
+    main 
+        img.logo(src="./../src/resources/logo.png", alt="")
+        nav
+            each link in index.links
+                a.link(href=link.url, target="_blank")=link.name.toUpperCase()
