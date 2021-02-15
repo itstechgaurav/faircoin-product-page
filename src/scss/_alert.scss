@@ -17,6 +17,7 @@
     font-size: 2rem;
     text-align: center;
     margin-bottom: 2rem;
+    line-height: 3rem;
   }
 
   &--price {
@@ -25,14 +26,15 @@
     color: #fff;
     text-align: center;
     font-size: 2.5rem;
-    font-weight: bold;
+    line-height: 3rem;
+    @include font(7);
     border-radius: 0 0 1rem 1rem;
     padding-top: 4rem;
     position: relative;
 
     &::after {
       position: absolute;
-      content: "\2713";
+      content: "\f383";
       top: 0;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -42,6 +44,7 @@
       border-radius: 50%;
       color: black;
       width: 5rem;
+      font-family: "Ionicons";
     }
   }
 }

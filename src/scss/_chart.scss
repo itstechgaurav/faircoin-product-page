@@ -21,8 +21,9 @@
     justify-content: flex-end;
     align-items: center;
     height: 150px;
+    transition: 0.3s;
 
-    &.active {
+    &:hover {
       & > .chart--bar {
         background: $color-black !important;
       }
@@ -30,7 +31,17 @@
       & > .chart--text {
         opacity: 1;
       }
+
+      transform: scale(1.1);
     }
+  }
+
+  &__top:not(:hover) &__col.active > &--bar {
+    background: $color-black !important;
+  }
+
+  &__top:not(:hover) &__col.active > &--text {
+    opacity: 1;
   }
 
   &__col:nth-child(3) &--bar {
@@ -59,6 +70,7 @@
     background: $color-bar;
     margin-bottom: 1rem;
     border-radius: 0.3rem;
+    transition: 0.3s;
   }
 
   &--text {
@@ -66,5 +78,6 @@
     color: $color-black;
     text-transform: uppercase;
     opacity: 0.6;
+    transition: 0.3s;
   }
 }
