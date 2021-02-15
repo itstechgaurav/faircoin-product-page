@@ -4,8 +4,93 @@ block title
     title=index.title
 
 block contents
+    nav
+        .logo
+            img(src="./../src/resources/logo-white.svg", alt="")
+        .nav__links
+            a.nav--link(href="") My Account
+            a.nav--link(href="") All Features
+            a.nav--link(href="") About Us
+        a.btn.btn--signup(href="") Sign up
     main 
-        img.logo(src="./../src/resources/logo.png", alt="")
-        nav
-            each link in index.links
-                a.link(href=link.url, target="_blank")=link.name.toUpperCase()
+        .left
+            .left__top
+                h1.main--heading Simple. Fast. 
+                    br
+                    | Yet rewarding.
+                p.sub--text
+                    | transfer and receive your funds with little to no fees. Instead, earn more by getting cashback from each and every transaction
+                a.btn.btn--cta(href="") Get Started
+            .left__bottom
+                //- social ilinks - social image links
+                .social__ilinks
+                    a.social--link(href="")
+                        img(src="./../src/resources/app store.svg", alt="")
+                    a.social--link(href="")
+                        img(src="./../src/resources/google play.svg", alt="")
+        
+        .right
+            .chart.chart__top
+                .chart__col
+                    .chart--bar
+                    .chart--text Mon
+                .chart__col
+                    .chart--bar
+                    .chart--text tue
+                .chart__col
+                    .chart--bar
+                    .chart--text wed
+                .chart__col.active
+                    .chart--bar
+                    .chart--text thu
+                .chart__col
+                    .chart--bar
+                    .chart--text fri
+                .chart__col
+                    .chart--bar
+                    .chart--text sat
+                .chart__col
+                    .chart--bar
+                    .chart--text sun
+            
+            .chart.details__chart
+                .details__chart__top.chart__col
+                    .details__chart--bar
+                    .details__chart__meta
+                        .details__chart--title Cashback
+                        .details__chart--title--sub points
+                        hr.divider
+                        .details__chart--total $140.54
+                .details__chart__bottom.details__chart__table
+                    .details__chart__table__row 
+                        .details__chart__table--col Transactions
+                        .details__chart__table--col Spent
+                        .details__chart__table--col Earned
+                    .details__chart__table__row 
+                        .details__chart__table--col Chanel
+                        .details__chart__table--col $360.00
+                        .details__chart__table--col $18.00
+                    .details__chart__table__row 
+                        .details__chart__table--col Uber
+                        .details__chart__table--col $360.00
+                        .details__chart__table--col $18.00
+                    .details__chart__table__row 
+                        .details__chart__table--col Gucci
+                        .details__chart__table--col $360.00
+                        .details__chart__table--col $18.00
+
+            img.credit__card--img(src="./../src/resources/credit__card.svg", alt="")
+
+            .alert
+                .alert--msg Transfer Was Succesful
+                .alert--price $850
+
+
+
+                    
+                        
+
+
+
+
+        

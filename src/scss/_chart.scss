@@ -1,0 +1,70 @@
+.chart {
+  padding: 2rem;
+  box-shadow: 1px 15px 20px 5px rgba($color-black, 0.1);
+  border-radius: 0.5rem;
+  position: absolute;
+  background: $color-white;
+
+  &__top {
+    width: 35rem;
+    display: flex;
+    justify-content: space-between;
+
+    // positioning the top
+    right: 7rem;
+    top: 4rem;
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 150px;
+
+    &.active {
+      & > .chart--bar {
+        background: $color-black !important;
+      }
+
+      & > .chart--text {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__col:nth-child(3) &--bar {
+    height: 40%;
+  }
+
+  &__col:nth-child(4) &--bar {
+    height: 60%;
+  }
+
+  &__col:nth-child(5) &--bar {
+    height: 20%;
+  }
+
+  &__col:nth-child(6) &--bar {
+    height: 30%;
+  }
+
+  &__col:nth-child(7) &--bar {
+    height: 55%;
+  }
+
+  &--bar {
+    height: 50%;
+    width: 20px;
+    background: $color-bar;
+    margin-bottom: 1rem;
+    border-radius: 0.3rem;
+  }
+
+  &--text {
+    font-size: 1.4rem;
+    color: $color-black;
+    text-transform: uppercase;
+    opacity: 0.6;
+  }
+}
